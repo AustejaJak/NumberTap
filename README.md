@@ -39,15 +39,22 @@ When the game is opened a main menu pops up with three posibilities:
 ### The game
 #### The start of the game
 At the start the menu opens.
+
 ![Menu page](https://github.com/AustejaJak/NumberTap/blob/39cf72ae2333187375bf63139beb303a03b532d6/menu.png)
+
 In the menu you can quit the game or open a settings window.
+
 ![Setting page](https://github.com/AustejaJak/NumberTap/blob/39cf72ae2333187375bf63139beb303a03b532d6/settings.png)
+
 When clicked play the game starts. The user needs to tap the screen if he or she wants the character to go up. On the top of the screen is a score counter which starts with "0" and a pause button, which allows the game to be paused. 
+
 ![Pause page](https://github.com/AustejaJak/NumberTap/blob/39cf72ae2333187375bf63139beb303a03b532d6/pause.png)
+
 On the bottom of the screen the generated equation is seen, the user will need to count the answer to the equation.
 
 #### The pipes are coming through
 When a user keeps tapping the screen after a couple of seconds the pipes fly to the character, the pipes contain two gaps in which one is correct answer to the equation on the bottom of the screen and second one is incorrect. When a user flies into the gap which has the correct answer it a score is added if he or she flies over into incorrect one the gameover screen is displayed and you are bringed to the start of the game.
+
 ![Pause page](https://github.com/AustejaJak/NumberTap/blob/39cf72ae2333187375bf63139beb303a03b532d6/over.png)
 
 #### The ways you can lose
