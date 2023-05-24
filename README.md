@@ -53,6 +53,8 @@ When a user keeps tapping the screen after a couple of seconds the pipes fly to 
 
 ![GameOver page](https://github.com/AustejaJak/NumberTap/blob/39cf72ae2333187375bf63139beb303a03b532d6/over.png)
 
+In the gameover screen not only current score is displayd, but also your highscore, so you can track your progress and compare it with your friends.
+
 #### The ways you can lose
 * Off screen: By user flying out of the screen.
 * Collision: By hitting the pipe.
