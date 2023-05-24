@@ -57,9 +57,9 @@ All rights belong to the people that are mentioned in the Contact section
 <!-- CONTACT -->
 ## Contact
 
-Austėja Jakimavičiūtė
-Tadas Tamošauskas
-Evelina Milenytė
+* Austėja Jakimavičiūtė
+* Tadas Tamošauskas
+* Evelina Milenytė
 
 Project Link: (https://github.com/AustejaJak/NumberTap)]([https://github.com/AustejaJak/NumberTap])
 
