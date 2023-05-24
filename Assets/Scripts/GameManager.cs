@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     private Spawning spawner;
 
     public GameObject playButton;
+    public GameObject menuButton;
     public GameObject gameOver;
     public GameObject pauseButton;
     public GameObject playAfterPauseButton;
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(false);
         pauseButton.SetActive(false);
         playAfterPauseButton.SetActive(false);
+        menuButton.SetActive(true);
         Yscore.text = "";
         highscore.text = "";
 
@@ -51,6 +54,7 @@ public class GameManager : MonoBehaviour
         //Hide play button and game over
         playButton.SetActive(false);
         gameOver.SetActive(false);
+        menuButton.SetActive(false);
 
         pauseButton.SetActive(true);
         playAfterPauseButton.SetActive(false);
@@ -59,12 +63,15 @@ public class GameManager : MonoBehaviour
         Yscore.text = "";
         highscore.text = "";
 
-        gameOver.SetActive(false);
-
         Time.timeScale = 1f;
         player.enabled = true;
         player.Reset();
 
+        Clear();
+    }
+
+    private void Clear()
+    {
         Pipes[] pipes = FindObjectsOfType<Pipes>();
         for (int i = 0; i < pipes.Length; i++)
         {
@@ -83,16 +90,16 @@ public class GameManager : MonoBehaviour
         pauseButton.SetActive(false);
         Pause();
         playAfterPauseButton.SetActive(true);
+        menuButton.SetActive(true);
     }
 
     public void PlayBut()
     {
         scoreText.text = score.ToString();
 
-        //Hide play button and game over
         playButton.SetActive(false);
         gameOver.SetActive(false);
-
+        menuButton.SetActive(false);
         pauseButton.SetActive(true);
         playAfterPauseButton.SetActive(false);
 
@@ -110,9 +117,10 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(true);
         pauseButton.SetActive(false);
         playAfterPauseButton.SetActive(false);
+        menuButton.SetActive(true);
 
         Pause();
-        //Play();
+        Clear();
 
         if (PlayerPrefs.HasKey("hiScore"))
 {
@@ -134,12 +142,16 @@ public class GameManager : MonoBehaviour
         highscore.text = "Highscore: " + PlayerPrefs.GetInt("hiScore").ToString();
     }
 
+    public void toMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
     public void IncreaseScore()
     {
         score++;
         scoreText.text = score.ToString();
 
-        //GenerateEquation();
         equationText.text = equations[0];
         equations.RemoveAt(0);
     }
